@@ -1,5 +1,6 @@
 package com.ipswichhistoricalsociety.cooneana;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -95,5 +96,17 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void onSendEmail(View v) {
+        Intent email = new Intent(Intent.ACTION_SEND);
+        email.putExtra(Intent.EXTRA_EMAIL, new String[] {getString(R.string.nav_header_email)});
+        email.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.mail_subject));
+        email.putExtra(Intent.EXTRA_TEXT, getString(R.string.mail_text));
+
+//need this to prompts email client only
+        email.setType("message/rfc822");
+
+        startActivity(Intent.createChooser(email, "Choose an Email client :"));
     }
 }
