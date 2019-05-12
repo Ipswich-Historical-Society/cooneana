@@ -14,6 +14,7 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
 
-    <string name="mail_subject">IHS Enquiries</string>
-    <string name="mail_text">Dear IHS Enqueiries,\n\nI would like some information about...\n\nThank you,\n</string>
+    <string name="mail_subject">IHS Enquirty</string>
+    <string name="mail_text">Dear IHS Enquiries,\n\nI would like some information about...\n\n\nThank you,\n</string>
+    <string name="mail_icon">Send Mail</string>
 </resources>
