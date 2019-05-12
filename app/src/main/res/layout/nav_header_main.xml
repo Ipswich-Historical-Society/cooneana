@@ -19,13 +19,30 @@
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         app:srcCompat="@drawable/ihs_logo_banner" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/nav_header_email"
-        android:textColor="@color/design_default_color_primary_dark"
-        android:textSize="11sp"
-        android:onClick="onSendEmail"
-        android:clickable="true"/>
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:contentDescription="@string/mail_icon"
+            app:srcCompat="@drawable/ic_mail_outline_black_24dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="231dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onSendEmail"
+            android:text="@string/nav_header_email"
+            android:textColor="@color/design_default_color_primary_dark"
+            android:textSize="12sp" />
+    </LinearLayout>
+
 </LinearLayout>
